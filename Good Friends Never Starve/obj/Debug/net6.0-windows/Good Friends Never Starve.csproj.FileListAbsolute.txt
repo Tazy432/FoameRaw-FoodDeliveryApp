@@ -1,0 +1,116 @@
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Good Friends Never Starve.exe
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Good Friends Never Starve.deps.json
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Good Friends Never Starve.runtimeconfig.json
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Good Friends Never Starve.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Good Friends Never Starve.pdb
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\refint\Good Friends Never Starve.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.pdb
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\ref\Good Friends Never Starve.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.Form1.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.Properties.Resources.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good Friends Never Starve.csproj.CopyComplete
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.UserControl1.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.UserControl2.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.ProduseRestaurant.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.listaDeProduserestaurant.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.FormRestaurante.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Good Friends Never Starve.dll.config
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraCharts.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Charts.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.CodeParser.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Data.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Data.Desktop.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.DataAccess.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.DataAccess.v22.2.UI.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.DataVisualization.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Diagram.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Drawing.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraGauges.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Images.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Map.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Mvvm.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Office.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Pdf.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Pdf.v22.2.Drawing.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.PivotGrid.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Printing.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraReports.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.RichEdit.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.RichEdit.v22.2.Export.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraScheduler.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraScheduler.v22.2.Core.Desktop.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Sparkline.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.SpellChecker.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Spreadsheet.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraTreeMap.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.TreeMap.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Utils.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Utils.v22.2.UI.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraNavBar.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraWizard.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraCharts.v22.2.Extensions.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraCharts.v22.2.UI.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraCharts.v22.2.Wizard.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraDiagram.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraDialogs.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Dialogs.v22.2.Core.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraGantt.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraGauges.v22.2.Presets.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraGauges.v22.2.Win.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraGrid.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraMap.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraBars.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraEditors.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraLayout.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraPdfViewer.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraPivotGrid.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraPrinting.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraReports.v22.2.Extensions.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraRichEdit.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraScheduler.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraScheduler.v22.2.Extensions.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraScheduler.v22.2.Reporting.Extensions.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraScheduler.v22.2.Reporting.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraSpellChecker.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraSpreadsheet.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraTreeList.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraTreeMap.v22.2.UI.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.XtraVerticalGrid.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\DevExpress.Xpo.v22.2.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ComponentModel.Composition.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.Data.Odbc.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.IO.Ports.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceModel.NetTcp.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceModel.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceModel.Security.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceModel.Syndication.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\System.ServiceProcess.ServiceController.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\linux\lib\netcoreapp2.0\System.Data.Odbc.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\osx\lib\netcoreapp2.0\System.Data.Odbc.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Data.Odbc.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.UserControlMap.resources
+C:\Users\Admin\Desktop\Food For Friends\Good Friends Never Starve\obj\Debug\net6.0-windows\Good_Friends_Never_Starve.CodeGenerator.resources
