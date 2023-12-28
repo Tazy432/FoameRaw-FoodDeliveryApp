@@ -36,19 +36,19 @@ namespace Good_Friends_Never_Starve
         /// </summary>
         private void afisareControls()
         {
-            if (formTata.label5.Text == "label5")
+            if (formTata._clientOrderLabel.Text == "label5")
             {
-                formTata.label5.Text = "";
-                formTata.label3.Text = "0";
+                formTata._clientOrderLabel.Text = "";
+                formTata._total.Text = "0";
 
             }
-            if (formTata.label6.Visible == false)
+            if (formTata._labelTotal.Visible == false)
             {
-                formTata.label6.Visible = true;
-                formTata.button1.Visible = true;
-                formTata.label3.Visible = true;
-                formTata._button2.Visible = true;
-                
+                formTata._labelTotal.Visible = true;
+                formTata._button1.Visible = true;
+                formTata._total.Visible = true;
+                formTata._goBackButton.Visible = true;
+
             }
 
         }
@@ -64,15 +64,15 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             afisareControls();
-            formTata.label5.Text = formTata.label5.Text + this.label1.Text + "     " + this.label2.Text + "\n";
-            formTata.mancaruri = formTata.mancaruri + this.label1.Text + '/';
-            int value = int.Parse(this.label2.Text);
-            int value2 = int.Parse(formTata.label3.Text);
+            formTata._clientOrderLabel.Text = formTata._clientOrderLabel.Text + this.numeProdus.Text + "     " + this.pretProdus.Text + "\n";
+            formTata._mancaruri = formTata._mancaruri + this.numeProdus.Text + '/';
+            int value = int.Parse(this.pretProdus.Text);
+            int value2 = int.Parse(formTata._total.Text);
             int valoareToatala = value + value2;
-            formTata.label3.Text = valoareToatala.ToString();
+            formTata._total.Text = valoareToatala.ToString();
 
 
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Good_Friends_Never_Starve
 {
     public partial class CodeGenerator : UserControl
-    {   
+    {
         public FormRestaurante formTata { get; set; }
         public CodeGenerator()
         {
@@ -27,11 +27,11 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void GenerateCode_Click(object sender, EventArgs e)
         {
-            this.button2.Visible = true;
+            this.checkStatusOrderButton.Visible = true;
             this.label2.Visible = true;
-            this.textBox1.Visible = true;
-            String codUnic = FormRestaurante.clientId + "/" + FormRestaurante.restaurantId + "/" + FormRestaurante.idMaximActual;
-            this.textBox1.Text = codUnic;
+            this.codeTextBox.Visible = true;
+            String codUnic = formTata._clientId + "/" + formTata._restaurantId + "/" + formTata._IdMaximActual;
+            this.codeTextBox.Text = codUnic;
         }
         /// <summary>
         /// 

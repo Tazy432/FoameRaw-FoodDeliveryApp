@@ -2,13 +2,13 @@
 
 namespace Good_Friends_Never_Starve
 {
-    partial class Form1
+    partial class logInForm
     {
         /// <summary>
         ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-    
+
         /// <summary>
         ///  Clean up any resources being used.
         /// </summary>
@@ -31,121 +31,125 @@ namespace Good_Friends_Never_Starve
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(logInForm));
+            usernameLabel = new Label();
+            passwordLabel = new Label();
+            backgroundImage = new PictureBox();
+            logInButton = new Button();
+            usernameTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            logoImage = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)backgroundImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // usernameLabel
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(268, 160);
-            label1.Name = "label1";
-            label1.Size = new Size(154, 33);
-            label1.TabIndex = 6;
-            label1.Text = "Username";
+            usernameLabel.Anchor = AnchorStyles.None;
+            usernameLabel.AutoSize = true;
+            usernameLabel.BackColor = Color.Transparent;
+            usernameLabel.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            usernameLabel.Location = new Point(306, 213);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(194, 43);
+            usernameLabel.TabIndex = 6;
+            usernameLabel.Text = "Username";
             // 
-            // label2
+            // passwordLabel
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(257, 206);
-            label2.Name = "label2";
-            label2.Size = new Size(163, 33);
-            label2.TabIndex = 7;
-            label2.Text = "Password";
+            passwordLabel.Anchor = AnchorStyles.None;
+            passwordLabel.AutoSize = true;
+            passwordLabel.BackColor = Color.Transparent;
+            passwordLabel.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordLabel.Location = new Point(294, 275);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new Size(206, 43);
+            passwordLabel.TabIndex = 7;
+            passwordLabel.Text = "Password";
             // 
-            // pictureBox1
+            // backgroundImage
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 450);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            backgroundImage.Dock = DockStyle.Fill;
+            backgroundImage.Image = (Image)resources.GetObject("backgroundImage.Image");
+            backgroundImage.Location = new Point(0, 0);
+            backgroundImage.Margin = new Padding(3, 4, 3, 4);
+            backgroundImage.Name = "backgroundImage";
+            backgroundImage.Size = new Size(914, 600);
+            backgroundImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            backgroundImage.TabIndex = 8;
+            backgroundImage.TabStop = false;
             // 
-            // button1
+            // logInButton
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(362, 268);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 9;
-            button1.Text = "Log In";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            logInButton.Anchor = AnchorStyles.None;
+            logInButton.Location = new Point(414, 357);
+            logInButton.Margin = new Padding(3, 4, 3, 4);
+            logInButton.Name = "logInButton";
+            logInButton.Size = new Size(86, 31);
+            logInButton.TabIndex = 9;
+            logInButton.Text = "Log In";
+            logInButton.UseVisualStyleBackColor = true;
+            logInButton.Click += button1_Click;
             // 
-            // textBox1
+            // usernameTextBox
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(443, 173);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(101, 23);
-            textBox1.TabIndex = 10;
+            usernameTextBox.Anchor = AnchorStyles.None;
+            usernameTextBox.Location = new Point(506, 231);
+            usernameTextBox.Margin = new Padding(3, 4, 3, 4);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(115, 27);
+            usernameTextBox.TabIndex = 10;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(444, 218);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 11;
+            passwordTextBox.Anchor = AnchorStyles.None;
+            passwordTextBox.Location = new Point(507, 291);
+            passwordTextBox.Margin = new Padding(3, 4, 3, 4);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PasswordChar = '*';
+            passwordTextBox.Size = new Size(114, 27);
+            passwordTextBox.TabIndex = 11;
             // 
-            // pictureBox2
+            // logoImage
             // 
-            pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(309, 9);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(172, 140);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 12;
-            pictureBox2.TabStop = false;
+            logoImage.Anchor = AnchorStyles.None;
+            logoImage.BackgroundImage = (Image)resources.GetObject("logoImage.BackgroundImage");
+            logoImage.Location = new Point(353, 12);
+            logoImage.Name = "logoImage";
+            logoImage.Size = new Size(197, 187);
+            logoImage.SizeMode = PictureBoxSizeMode.CenterImage;
+            logoImage.TabIndex = 12;
+            logoImage.TabStop = false;
             // 
-            // Form1
+            // logInForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            Name = "Form1";
+            ClientSize = new Size(914, 600);
+            Controls.Add(logoImage);
+            Controls.Add(passwordTextBox);
+            Controls.Add(usernameTextBox);
+            Controls.Add(logInButton);
+            Controls.Add(passwordLabel);
+            Controls.Add(usernameLabel);
+            Controls.Add(backgroundImage);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "logInForm";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backgroundImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label1;
-        private Label label2;
-        private PictureBox pictureBox1;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private PictureBox pictureBox2;
+        private Label usernameLabel;
+        private Label passwordLabel;
+        private PictureBox backgroundImage;
+        private Button logInButton;
+        private TextBox usernameTextBox;
+        private TextBox passwordTextBox;
+        private PictureBox logoImage;
     }
 }

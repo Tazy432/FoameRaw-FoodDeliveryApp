@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 
 namespace Good_Friends_Never_Starve
 {
-    public partial class Form1 : Form
+    public partial class logInForm : Form
     {
-        public Form1()
+        public logInForm()
         {
             InitializeComponent();
 
@@ -23,10 +23,10 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Parent = pictureBox1;
-            label2.Parent = pictureBox1;
-            label1.BackColor = Color.Transparent;
-            label2.BackColor = Color.Transparent;
+            usernameLabel.Parent = backgroundImage;
+            passwordLabel.Parent = backgroundImage;
+            usernameLabel.BackColor = Color.Transparent;
+            passwordLabel.BackColor = Color.Transparent;
         }
         /// <summary>
         /// 
@@ -41,8 +41,8 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            string username1 = textBox1.Text;
-            string parola1 = textBox2.Text;
+            string username1 = usernameTextBox.Text;
+            string parola1 = passwordTextBox.Text;
             try
             {
                 String comanda = "Select * from Users where nume= '" + username1 + "' And parola='" + parola1 + "'";
@@ -55,25 +55,25 @@ namespace Good_Friends_Never_Starve
 
                     this.Hide();
                     FormRestaurante form2 = new FormRestaurante();
-                    form2.label5.Text = "It's good to see you , \n" + "       " + username1;
+                    form2._clientOrderLabel.Text = "It's good to see you , \n" + "       " + username1;
                     foreach (DataRow i in tabel.Rows)
                     {
-                        FormRestaurante.clientId = i["idUser"].ToString();
+                        form2._clientId = i["idUser"].ToString();
                         break;
                     }
                     form2.Show();
-                    
+
 
                 }
                 else
                 {
                     MessageBox.Show("Invalid combination of credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox1.Clear();
-                    textBox2.Clear();
+                    usernameTextBox.Clear();
+                    passwordTextBox.Clear();
                 }
 
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

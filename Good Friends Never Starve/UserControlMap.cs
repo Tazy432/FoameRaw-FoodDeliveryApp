@@ -13,6 +13,7 @@ using System.Windows.Media.TextFormatting;
 using DevExpress.CodeParser;
 using DevExpress.Map.Native;
 using DevExpress.XtraMap;
+using DotNetEnv;
 
 namespace Good_Friends_Never_Starve
 {
@@ -33,11 +34,12 @@ namespace Good_Friends_Never_Starve
         /// the program wouldn't get any responses
         /// from bing , and so there wouldnt be no map
         /// </summary>
-        string bingKey = "Aj4Cr79BAoa2NQ5BIxcYkomY-wjQL2-Ahif79rtnGV0y7O6k-vEw7Efz49_8ZBsf";
+        string bingKey = Env.GetString("BING_API_KEY");
         string adresaLivrare, adresaRestaurant = "";
-        public static int x = 0;     
+        public static int x = 0;
         public UserControlMap()
         {
+            Env.Load();
             InitializeComponent();
 
         }
@@ -66,12 +68,12 @@ namespace Good_Friends_Never_Starve
                 BingRouteDataProvider provider = new BingRouteDataProvider
                 {
                     BingKey = bingKey
-                };                
+                };
                 if (mapControl1.Layers.Count > 0)
                 {
                     mapControl1.Layers.RemoveAt(x);
                     x++;
-                }             
+                }
                 mapControl1.Layers.Add(new InformationLayer
                 {
                     DataProvider = provider
@@ -85,11 +87,11 @@ namespace Good_Friends_Never_Starve
                 });
                 provider.RouteCalculated += OnRouteCalculated;
                 List<RouteWaypoint> waypoints = new List<RouteWaypoint>();
-                adresaLivrare = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+                adresaLivrare = cityTextBox.Text + " " + streetTextBox.Text + " " + nrTextBox.Text;
                 SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-FTIQA47\MSSQLSERVER11;Initial Catalog=""Baza de date food app"";Integrated Security=True");
                 try
                 {
-                    string comanda = "Select adresaRestaurant from Restaurant where restaurantId='" + FormRestaurante.restaurantId + "'";
+                    string comanda = "Select adresaRestaurant from Restaurant where restaurantId='" + formTata._restaurantId + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(comanda, conn);
                     DataTable tabelAdresa = new DataTable();
                     sda.Fill(tabelAdresa);
@@ -158,7 +160,7 @@ namespace Good_Friends_Never_Starve
 
                         foreach (BingRouteLeg leg in e.CalculationResult.RouteResults[rnum].Legs)
                         {
-                            label16.Text = (leg.Distance * 1.6).ToString("0.00") + "km";
+                            distanceDelivery.Text = (leg.Distance * 1.6).ToString("0.00") + "km";
                             afisareFactura();
                         }
 
@@ -197,22 +199,22 @@ namespace Good_Friends_Never_Starve
         public void afisareFactura()
         {
 
-            this.label8.Text = FormRestaurante.costLivrare;
+            this.deliveryPrice.Text = formTata._costLivrare;
 
-            if (double.Parse(this.label16.Text.Substring(0, (this.label16.Text.Length - 2))) > double.Parse(FormRestaurante.livrareStandard) && double.Parse(this.label16.Text.Substring(0, (this.label16.Text.Length - 2))) < int.Parse(FormRestaurante.livrareMaxima))
+            if (double.Parse(this.distanceDelivery.Text.Substring(0, (this.distanceDelivery.Text.Length - 2))) > double.Parse(formTata._livrareStandard) && double.Parse(this.distanceDelivery.Text.Substring(0, (this.distanceDelivery.Text.Length - 2))) < int.Parse(formTata._livrareMaxima))
             {
-                this.label9.Text = FormRestaurante.livrareExtra;
+                this.extraDeliveryPrice.Text =formTata._livrareExtra;
             }
-            else if (double.Parse(this.label16.Text.Substring(0, (this.label16.Text.Length - 2))) > int.Parse(FormRestaurante.livrareMaxima))
+            else if (double.Parse(this.distanceDelivery.Text.Substring(0, (this.distanceDelivery.Text.Length - 2))) > int.Parse(formTata._livrareMaxima))
             {
                 MessageBox.Show("Your order exceeds the maximum distance\n" + "Please change the adress , or select another restaurant", "Location too far", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                this.panel3.Visible = false;
+                this.confirmOrderPanel.Visible = false;
                 return;
             }
-            this.label10.Text = formTata.label3.Text;
-            this.label12.Text = (double.Parse(FormRestaurante.costLivrare) + double.Parse(this.label9.Text) + double.Parse(formTata.label3.Text)).ToString();
-            this.label15.Text = FormRestaurante.livrareMaxima;
-            this.panel3.Visible = true;
+            this.productsPrice.Text = formTata._total.Text;
+            this.totalPrice.Text = (double.Parse(formTata._costLivrare) + double.Parse(this.extraDeliveryPrice.Text) + double.Parse(formTata._total.Text)).ToString();
+            this.maxDistanceDelivery.Text = formTata._livrareMaxima;
+            this.confirmOrderPanel.Visible = true;
 
         }
         /// <summary>
@@ -236,15 +238,17 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            this.formTata.label3.Visible = false;
-            this.formTata.label6.Visible = false;
-            this.formTata.label7.Visible = false;
-            this.formTata.label8.Visible = false;
-            Panel factura = this.panel3 as Panel;
-            factura.Width = formTata.flowLayoutPanel1.Width - 8;
-            factura.Height = formTata.flowLayoutPanel1.Height - 8;
-            this.formTata.flowLayoutPanel1.Controls.Clear();
-            this.formTata._button2.Visible = false;          
+            this.formTata._total.Visible = false;
+            this.formTata._labelTotal.Visible = false;
+            this.formTata._minimuRequOrder.Visible = false;
+            this.formTata._priceOfStandardDelivery.Visible = false;
+            this.formTata._clientOrderLabel.Visible = false;
+
+            Panel factura = this.confirmOrderPanel as Panel;
+            factura.Width = formTata._flowLayoutPanel1.Width - 8;
+            factura.Height = formTata._flowLayoutPanel1.Height - 8;
+            this.formTata._flowLayoutPanel1.Controls.Clear();
+            this.formTata._goBackButton.Visible = false;
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-FTIQA47\MSSQLSERVER11;Initial Catalog=""Baza de date food app"";Integrated Security=True");
             using (conn)
             {
@@ -255,10 +259,10 @@ namespace Good_Friends_Never_Starve
                     string comanda = "insert into Factura values(@primu,@doilea,@treilea,@patrulea,@cincilea)";
                     using (SqlCommand cmd = new SqlCommand(comanda, conn))
                     {
-                        cmd.Parameters.Add("@primu", SqlDbType.Int).Value = FormRestaurante.clientId;
-                        cmd.Parameters.Add("@doilea", SqlDbType.Int).Value = FormRestaurante.restaurantId;
-                        cmd.Parameters.Add("@treilea", SqlDbType.Int).Value = FormRestaurante.idMaximActual;
-                        cmd.Parameters.Add("@patrulea", SqlDbType.Int).Value = this.label12.Text;
+                        cmd.Parameters.Add("@primu", SqlDbType.Int).Value = formTata._clientId;
+                        cmd.Parameters.Add("@doilea", SqlDbType.Int).Value = formTata._restaurantId;
+                        cmd.Parameters.Add("@treilea", SqlDbType.Int).Value = formTata._IdMaximActual;
+                        cmd.Parameters.Add("@patrulea", SqlDbType.Int).Value = this.totalPrice.Text;
                         cmd.Parameters.Add("@cincilea", SqlDbType.Int).Value = 0;
                         cmd.ExecuteNonQuery();
 
@@ -266,6 +270,7 @@ namespace Good_Friends_Never_Starve
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(formTata._clientId + " + " + formTata._restaurantId + " + " + formTata._IdMaximActual + " + " + this.totalPrice.Text);
                     MessageBox.Show(ex.Message);
                 }
                 finally
@@ -275,7 +280,7 @@ namespace Good_Friends_Never_Starve
             }
             CodeGenerator generator = new CodeGenerator();
             generator.formTata = this.formTata;
-            this.formTata.flowLayoutPanel1.Controls.Add(generator);
+            this.formTata._flowLayoutPanel1.Controls.Add(generator);
 
         }
     }

@@ -13,7 +13,7 @@ namespace Good_Friends_Never_Starve
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new logInForm());
             //Application.Run(new FormRestaurante());
         }
     }

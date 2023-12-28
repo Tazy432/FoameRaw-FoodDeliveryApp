@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button1 = new Button();
+            numeProdus = new Label();
+            pretProdus = new Label();
+            descriereProdus = new Label();
+            addToCartButton = new Button();
             panel1 = new Panel();
             SuspendLayout();
             // 
-            // label1
+            // numeProdus
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(127, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(166, 21);
-            label1.TabIndex = 0;
-            label1.Text = "denumireProdus";
+            numeProdus.AutoSize = true;
+            numeProdus.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            numeProdus.Location = new Point(127, 23);
+            numeProdus.Name = "numeProdus";
+            numeProdus.Size = new Size(166, 21);
+            numeProdus.TabIndex = 0;
+            numeProdus.Text = "denumireProdus";
             // 
-            // label2
+            // pretProdus
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(326, 23);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 21);
-            label2.TabIndex = 1;
-            label2.Text = "pretProdus";
+            pretProdus.AutoSize = true;
+            pretProdus.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            pretProdus.Location = new Point(326, 23);
+            pretProdus.Name = "pretProdus";
+            pretProdus.Size = new Size(121, 21);
+            pretProdus.TabIndex = 1;
+            pretProdus.Text = "pretProdus";
             // 
-            // label3
+            // descriereProdus
             // 
-            label3.Font = new Font("Showcard Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(477, 23);
-            label3.Name = "label3";
-            label3.Size = new Size(220, 102);
-            label3.TabIndex = 2;
-            label3.Text = "DescriereProdus";
+            descriereProdus.Font = new Font("Showcard Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            descriereProdus.Location = new Point(477, 23);
+            descriereProdus.Name = "descriereProdus";
+            descriereProdus.Size = new Size(220, 102);
+            descriereProdus.TabIndex = 2;
+            descriereProdus.Text = "DescriereProdus";
             // 
-            // button1
+            // addToCartButton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Location = new Point(687, 43);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 48);
-            button1.TabIndex = 3;
-            button1.Text = "Add to cart";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            addToCartButton.BackColor = Color.Transparent;
+            addToCartButton.Location = new Point(687, 43);
+            addToCartButton.Name = "addToCartButton";
+            addToCartButton.Size = new Size(115, 48);
+            addToCartButton.TabIndex = 3;
+            addToCartButton.Text = "Add to cart";
+            addToCartButton.UseVisualStyleBackColor = false;
+            addToCartButton.Click += button1_Click;
             // 
             // panel1
             // 
@@ -89,10 +89,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSalmon;
             Controls.Add(panel1);
-            Controls.Add(button1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(addToCartButton);
+            Controls.Add(descriereProdus);
+            Controls.Add(pretProdus);
+            Controls.Add(numeProdus);
             Name = "listaDeProduserestaurant";
             Size = new Size(833, 150);
             ResumeLayout(false);
@@ -101,10 +101,10 @@
 
         #endregion
 
-        public Label label1;
-        public Label label2;
-        public Label label3;
-        public Button button1;
+        public Label numeProdus;
+        public Label pretProdus;
+        public Label descriereProdus;
+        public Button addToCartButton;
         public Panel panel1;
     }
 }

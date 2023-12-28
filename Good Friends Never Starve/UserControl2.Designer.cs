@@ -1,6 +1,6 @@
 ﻿namespace Good_Friends_Never_Starve
 {
-    partial class UserControl2
+    partial class Restaurant
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,103 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl2));
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            pictureBox1 = new PictureBox();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restaurant));
+            nameOfRestaurant = new Label();
+            programOfRestaurant = new Label();
+            costOfDelivery = new Label();
+            restaurantImage = new PictureBox();
+            decorativePanel = new Panel();
+            ((System.ComponentModel.ISupportInitialize)restaurantImage).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // nameOfRestaurant
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(162, 40);
-            label1.Name = "label1";
-            label1.Size = new Size(54, 18);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
-            label1.MouseEnter += afisareRestaurant;
-            label1.MouseLeave += afisareRestaurant2;
+            nameOfRestaurant.AutoSize = true;
+            nameOfRestaurant.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            nameOfRestaurant.Location = new Point(185, 53);
+            nameOfRestaurant.Name = "nameOfRestaurant";
+            nameOfRestaurant.Size = new Size(65, 21);
+            nameOfRestaurant.TabIndex = 1;
+            nameOfRestaurant.Text = "label1";
+            nameOfRestaurant.MouseEnter += afisareRestaurant;
+            nameOfRestaurant.MouseLeave += afisareRestaurant2;
             // 
-            // label2
+            // programOfRestaurant
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(342, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(54, 18);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
-            label2.MouseEnter += afisareRestaurant;
-            label2.MouseLeave += afisareRestaurant2;
+            programOfRestaurant.AutoSize = true;
+            programOfRestaurant.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            programOfRestaurant.Location = new Point(391, 53);
+            programOfRestaurant.Name = "programOfRestaurant";
+            programOfRestaurant.Size = new Size(66, 21);
+            programOfRestaurant.TabIndex = 2;
+            programOfRestaurant.Text = "label2";
+            programOfRestaurant.MouseEnter += afisareRestaurant;
+            programOfRestaurant.MouseLeave += afisareRestaurant2;
             // 
-            // label3
+            // costOfDelivery
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(532, 40);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 18);
-            label3.TabIndex = 3;
-            label3.Text = "label3";
-            label3.MouseEnter += afisareRestaurant;
-            label3.MouseLeave += afisareRestaurant2;
+            costOfDelivery.AutoSize = true;
+            costOfDelivery.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            costOfDelivery.Location = new Point(608, 53);
+            costOfDelivery.Name = "costOfDelivery";
+            costOfDelivery.Size = new Size(66, 21);
+            costOfDelivery.TabIndex = 3;
+            costOfDelivery.Text = "label3";
+            costOfDelivery.MouseEnter += afisareRestaurant;
+            costOfDelivery.MouseLeave += afisareRestaurant2;
             // 
-            // pictureBox1
+            // restaurantImage
             // 
-            pictureBox1.AccessibleRole = AccessibleRole.MenuBar;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(27, 16);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 73);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            pictureBox1.MouseEnter += afisareRestaurant;
-            pictureBox1.MouseLeave += afisareRestaurant2;
+            restaurantImage.AccessibleRole = AccessibleRole.MenuBar;
+            restaurantImage.Image = (Image)resources.GetObject("restaurantImage.Image");
+            restaurantImage.Location = new Point(31, 21);
+            restaurantImage.Name = "restaurantImage";
+            restaurantImage.Size = new Size(114, 97);
+            restaurantImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            restaurantImage.TabIndex = 4;
+            restaurantImage.TabStop = false;
+            restaurantImage.MouseEnter += afisareRestaurant;
+            restaurantImage.MouseLeave += afisareRestaurant2;
             // 
-            // panel1
+            // decorativePanel
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BackColor = Color.Tomato;
-            panel1.Location = new Point(1, 104);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(636, 8);
-            panel1.TabIndex = 5;
-            panel1.MouseDoubleClick += AfisareProduseRestaurant;
+            decorativePanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            decorativePanel.BackColor = Color.Tomato;
+            decorativePanel.Location = new Point(1, 139);
+            decorativePanel.Name = "decorativePanel";
+            decorativePanel.Size = new Size(727, 11);
+            decorativePanel.TabIndex = 5;
+            decorativePanel.MouseDoubleClick += AfisareProduseRestaurant;
             // 
-            // UserControl2
+            // Restaurant
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSalmon;
-            Controls.Add(panel1);
-            Controls.Add(pictureBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "UserControl2";
-            Size = new Size(639, 114);
+            Controls.Add(decorativePanel);
+            Controls.Add(restaurantImage);
+            Controls.Add(costOfDelivery);
+            Controls.Add(programOfRestaurant);
+            Controls.Add(nameOfRestaurant);
+            Name = "Restaurant";
+            Size = new Size(730, 152);
             MouseDoubleClick += AfisareProduseRestaurant;
             MouseEnter += afisareRestaurant;
             MouseLeave += afisareRestaurant2;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)restaurantImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        public Label label1;
-        public Label label2;
-        public Label label3;
-        public PictureBox pictureBox1;
-        public Panel panel1;
+        public Label nameOfRestaurant;
+        public Label programOfRestaurant;
+        public Label costOfDelivery;
+        public PictureBox restaurantImage;
+        public Panel decorativePanel;
         public string idUserControl;
         //public Form parentForm;
     }

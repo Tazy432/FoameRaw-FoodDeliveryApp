@@ -16,15 +16,29 @@ namespace Good_Friends_Never_Starve
 /// as the parent object . In spite of all this , the class work just fine . I woulve corrected some of this,
 /// but time was relly not by my side , being in pressesion and all that .
 /// </summary>
-    public partial class UserControl2 : UserControl
+    public partial class Restaurant : UserControl
 
     {
-        public string idClient;
+        private string idClient = "0";
         private string comandaMinima = "0";//minim comanda
         private string costLivrare = "0";//cost standart de livrare
         private string livrareStandard = "0";//distanta de livrare 
         private string livrareExtra = "0";//cost livrare extra
         private string livrareMaxima = "0";//distanta maxima de livrare
+        private string idRestaurant = "0";
+
+        #region geters and setters for the info's about the chosen restaurant
+        public string _idRestaurant
+        {
+            get { return idRestaurant; }
+            set { idRestaurant = value; }
+        }
+
+        public string _idClient
+        {
+            get { return idClient; }
+            set { idClient = value; }
+        }
         public string LivrareExtra
         {
             get { return livrareExtra; }
@@ -50,6 +64,7 @@ namespace Good_Friends_Never_Starve
             get { return livrareMaxima; }
             set { livrareMaxima = value; }
         }
+        #endregion
         /// <summary>
         /// This function checks wheter the restaurant is open or closed by getting the work hors of the
         /// restuarant in a "hh:mm-hh:mm" string format h-hour , m-minute . When the program is overnigh
@@ -89,19 +104,21 @@ namespace Good_Friends_Never_Starve
             }
 
         }
-        public UserControl2()
+        public Restaurant()
         {
             InitializeComponent();
 
         }
 
 
-
+        /*
         public string idRestaurant;
+        
         private string _numeRes;
         private string _programRes;
         private string _costDeliver;
         private Image _imagineRes;
+        */
         /// <summary>
         /// When a retaurant is closed , it becomes 'inactive' . Changing its collor to gray , and removing 
         /// Some mouse methods . The click method remains .
@@ -111,14 +128,14 @@ namespace Good_Friends_Never_Starve
             this.BackColor = Color.Gray;
             this.MouseEnter -= this.afisareRestaurant;
             this.MouseLeave -= this.afisareRestaurant2;
-            this.label1.MouseEnter -= this.afisareRestaurant;
-            this.label1.MouseLeave -= this.afisareRestaurant2;
-            this.label2.MouseEnter -= this.afisareRestaurant;
-            this.label2.MouseLeave -= this.afisareRestaurant2;
-            this.label3.MouseEnter -= this.afisareRestaurant;
-            this.label3.MouseLeave -= this.afisareRestaurant2;
-            this.pictureBox1.MouseEnter -= this.afisareRestaurant;
-            this.pictureBox1.MouseLeave -= this.afisareRestaurant2;
+            this.nameOfRestaurant.MouseEnter -= this.afisareRestaurant;
+            this.nameOfRestaurant.MouseLeave -= this.afisareRestaurant2;
+            this.programOfRestaurant.MouseEnter -= this.afisareRestaurant;
+            this.programOfRestaurant.MouseLeave -= this.afisareRestaurant2;
+            this.costOfDelivery.MouseEnter -= this.afisareRestaurant;
+            this.costOfDelivery.MouseLeave -= this.afisareRestaurant2;
+            this.restaurantImage.MouseEnter -= this.afisareRestaurant;
+            this.restaurantImage.MouseLeave -= this.afisareRestaurant2;
         }
 
 
@@ -146,53 +163,54 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void AfisareProduseRestaurant(object sender, MouseEventArgs e)
         {
-            if (openClosed(this.label2.Text) == false)
+            if (openClosed(this.programOfRestaurant.Text) == false)
             {
                 MessageBox.Show("Restaurant is currently closed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 FormRestaurante form3 = new FormRestaurante();
-                FormRestaurante.comandaMinima = this.ComandaMinima;
-                FormRestaurante.costLivrare = this.CostLivrare;
-                FormRestaurante.livrareStandard = this.LivrareStandard;
-                FormRestaurante.livrareMaxima = this.LivrareMaxima;
-                FormRestaurante.livrareExtra = this.LivrareExtra;
-                FormRestaurante.restaurantId = this.idRestaurant;
+                form3._comandaMinima = this.ComandaMinima;
+                form3._costLivrare = this.CostLivrare;
+                form3._livrareStandard = this.LivrareStandard;
+                form3._livrareMaxima = this.LivrareMaxima;
+                form3._livrareExtra = this.LivrareExtra;
+                form3._restaurantId = this.idRestaurant;
+                form3._clientId = idClient;
 
                 System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(@"Data Source=DESKTOP-FTIQA47\MSSQLSERVER11;Initial Catalog=""Baza de date food app"";Integrated Security=True");
                 String comanda = "Select * from PreturiRestaurante p join Foods f on p.foodId=f.foodId where restaurantId='" + this.idRestaurant + "'";
                 System.Data.SqlClient.SqlDataAdapter sda3 = new System.Data.SqlClient.SqlDataAdapter(comanda, conn);
                 DataTable tabel = new DataTable();
                 sda3.Fill(tabel);
-                form3.label7.Text = "Minimum order: " + this.comandaMinima.ToString();
-                form3.label7.Visible = true;
-                form3.label8.Text = "Standard delivery: " + this.livrareStandard.ToString();
-                form3.label8.Visible = true;
+                form3._minimuRequOrder.Text = "Minimum order: " + this.comandaMinima.ToString();
+                form3._minimuRequOrder.Visible = true;
+                form3._priceOfStandardDelivery.Text = "Standard delivery: " + this.livrareStandard.ToString();
+                form3._priceOfStandardDelivery.Visible = true;
                 form3.Show();
-                form3.textBox1.Visible = false;
-                form3.label9.Visible = false;
-                form3.button3.Visible = false;
-                form3.flowLayoutPanel1.Controls.Clear();
+                form3._uniqueCodeSearchBar.Visible = false;
+                form3._uniqueOrderCodeLabel.Visible = false;
+                form3._searchByUniqueCodeButton.Visible = false;
+                form3._flowLayoutPanel1.Controls.Clear();
                 foreach (DataRow i in tabel.Rows)
                 {
 
                     listaDeProduserestaurant a = new listaDeProduserestaurant();
 
-                    a.label2.Text = i["pret"].ToString();
-                    a.label3.Text = i["descriere"].ToString();
-                    a.label1.Text = i["denumire"].ToString();
-                    a.Width = form3.flowLayoutPanel1.Width * 2;
-                    a.panel1.Width = form3.flowLayoutPanel1.Width * 2;
+                    a.pretProdus.Text = i["pret"].ToString();
+                    a.descriereProdus.Text = i["descriere"].ToString();
+                    a.numeProdus.Text = i["denumire"].ToString();
+                    a.Width = form3._flowLayoutPanel1.Width * 2;
+                    a.panel1.Width = form3._flowLayoutPanel1.Width * 2;
                     a.formTata = form3;
-                    form3.flowLayoutPanel1.Controls.Add(a);
+                    form3._flowLayoutPanel1.Controls.Add(a);
 
 
                 }
-                form3.label1.Text = "Nume Produs";
-                form3.label2.Text = "Pret";
-                form3.label4.Text = "Descriere";
-                form3.label5.Text = "";
+                form3._labelNumeRes.Text = "Nume Produs";
+                form3._labelProgramRes.Text = "Pret";
+                form3._labelTaxaLivrareRes.Text = "Descriere";
+                form3._clientOrderLabel.Text = "";
 
             }
 

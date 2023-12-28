@@ -3,7 +3,9 @@ insert into Users (nume,parola) values ('admin','buna')
 insert into Users (nume,parola) values ('claudiu','claudiu2000')
 
 select * from Users
-
+update Restaurant
+set adresaRestaurant='ploiesti Cluj-Napoca 3'
+where restaurantId=1
 select * from Restaurant
 INSERT into Restaurant values('Republicii 3' ,'Carabusul Ostenit',50,10,10,10,'05:00','05:30')
 insert into Restaurant values ('Crinului 20','Jocu Ielelor',60,10,20,10,'08:00','21:00')

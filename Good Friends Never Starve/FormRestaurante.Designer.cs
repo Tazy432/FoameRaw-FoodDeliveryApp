@@ -19,14 +19,109 @@
             }
             base.Dispose(disposing);
         }
-        public Button _button2
+        #region getters and setters for the buttons inside FormRestaurante class
+        public Button _goBackButton
         {
-            get { return button2; }
-            set { button2 = value; }
+            get { return goBackButton; }
+            set { goBackButton = value; }
         }
-
-
-
+        public Button _button1
+        {
+            get { return finishOrderButton; }
+            set { finishOrderButton = value; }
+        }
+        public Button _searchByUniqueCodeButton
+        {
+            get { return searchByUniqueCodeButton; }
+            set { searchByUniqueCodeButton = value; }
+        }
+        #endregion
+        #region getters and setters for the panels inside the FormRestaurante class 
+        public Panel _panelForLogo
+        {
+            get { return panelForLogo; }
+            set { panelForLogo = value; }
+        }
+        public Panel _panelForRestaurantDetails
+        {
+            get { return panelForRestaurantDetails; }
+            set { panelForRestaurantDetails = value; }
+        }
+        public Panel _panelForCheckClient
+        {
+            get { return panelForCheckClient; }
+            set { panelForCheckClient = value; }
+        }
+        public Panel _panelForClientOrder
+        {
+            get { return panelForClientOrder; }
+            set { panelForClientOrder = value; }
+        }
+        #endregion       
+        #region getters and setters for the labels inside the formRestaurante class
+        public Label _labelNumeRes
+        {
+            get { return labelNumeRes; }
+            set { labelNumeRes = value; }
+        }
+        public Label _labelProgramRes
+        {
+            get { return labelProgramRes; }
+            set { labelProgramRes = value; }
+        }
+        public Label _total
+        {
+            get { return total; }
+            set { total = value; }
+        }
+        public Label _labelTaxaLivrareRes
+        {
+            get { return labelTaxaLivrareRes; }
+            set { labelTaxaLivrareRes = value; }
+        }
+        public Label _clientOrderLabel
+        {
+            get { return clientOrderLabel; }
+            set { clientOrderLabel = value; }
+        }
+        public Label _labelTotal
+        {
+            get { return labelTotal; }
+            set { labelTotal = value; }
+        }
+        public Label _minimuRequOrder
+        {
+            get { return minimuRequOrder; }
+            set { minimuRequOrder = value; }
+        }
+        public Label _priceOfStandardDelivery
+        {
+            get { return priceOfStandardDelivery; }
+            set { priceOfStandardDelivery = value; }
+        }
+        public Label _uniqueOrderCodeLabel
+        {
+            get { return uniqueOrderCodeLabel; }
+            set { uniqueOrderCodeLabel = value; }
+        }
+        #endregion
+        #region getters and setters for the picture box, flowLayoutPanel and text box from the FormRestaurante class
+        public FlowLayoutPanel _flowLayoutPanel1
+        {
+            get { return flowLayoutPanel1; }
+            set { flowLayoutPanel1 = value; }
+        }
+        public PictureBox _appLogo
+        {
+            get { return appLogo; }
+            set { appLogo = value; }
+        }
+        public TextBox _uniqueCodeSearchBar
+        {
+            get { return uniqueCodeSearchBar; }
+            set { uniqueCodeSearchBar = value; }
+        }
+        #endregion
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -37,29 +132,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRestaurante));
             flowLayoutPanel1 = new FlowLayoutPanel();
-            panel1 = new Panel();
-            button2 = new Button();
-            label1 = new Label();
-            label4 = new Label();
-            label2 = new Label();
-            panel3 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label3 = new Label();
-            label6 = new Label();
-            button1 = new Button();
-            panel4 = new Panel();
-            label5 = new Label();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            label9 = new Label();
-            textBox1 = new TextBox();
-            button3 = new Button();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelForRestaurantDetails = new Panel();
+            goBackButton = new Button();
+            labelNumeRes = new Label();
+            labelTaxaLivrareRes = new Label();
+            labelProgramRes = new Label();
+            panelForCheckClient = new Panel();
+            searchByUniqueCodeButton = new Button();
+            uniqueCodeSearchBar = new TextBox();
+            uniqueOrderCodeLabel = new Label();
+            priceOfStandardDelivery = new Label();
+            minimuRequOrder = new Label();
+            total = new Label();
+            labelTotal = new Label();
+            finishOrderButton = new Button();
+            panelForClientOrder = new Panel();
+            clientOrderLabel = new Label();
+            panelForLogo = new Panel();
+            appLogo = new PictureBox();
+            panelForRestaurantDetails.SuspendLayout();
+            panelForCheckClient.SuspendLayout();
+            panelForClientOrder.SuspendLayout();
+            panelForLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)appLogo).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -72,198 +167,195 @@
             flowLayoutPanel1.Size = new Size(752, 653);
             flowLayoutPanel1.TabIndex = 2;
             // 
-            // panel1
+            // panelForRestaurantDetails
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.AutoSize = true;
-            panel1.BackColor = Color.IndianRed;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(215, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(752, 48);
-            panel1.TabIndex = 3;
+            panelForRestaurantDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panelForRestaurantDetails.AutoSize = true;
+            panelForRestaurantDetails.BackColor = Color.IndianRed;
+            panelForRestaurantDetails.Controls.Add(goBackButton);
+            panelForRestaurantDetails.Controls.Add(labelNumeRes);
+            panelForRestaurantDetails.Controls.Add(labelTaxaLivrareRes);
+            panelForRestaurantDetails.Controls.Add(labelProgramRes);
+            panelForRestaurantDetails.Location = new Point(215, 0);
+            panelForRestaurantDetails.Name = "panelForRestaurantDetails";
+            panelForRestaurantDetails.Size = new Size(752, 48);
+            panelForRestaurantDetails.TabIndex = 3;
             // 
-            // button2
+            // goBackButton
             // 
-            button2.Location = new Point(14, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 4;
-            button2.Text = "Back\r\n";
-            button2.UseVisualStyleBackColor = true;
-            button2.Visible = false;
-            button2.Click += button2_Click;
+            goBackButton.Location = new Point(14, 4);
+            goBackButton.Name = "goBackButton";
+            goBackButton.Size = new Size(94, 29);
+            goBackButton.TabIndex = 4;
+            goBackButton.Text = "Back\r\n";
+            goBackButton.UseVisualStyleBackColor = true;
+            goBackButton.Visible = false;
+            goBackButton.Click += button2_Click;
             // 
-            // label1
+            // labelNumeRes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(177, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Nume ";
+            labelNumeRes.AutoSize = true;
+            labelNumeRes.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNumeRes.Location = new Point(177, 9);
+            labelNumeRes.Name = "labelNumeRes";
+            labelNumeRes.Size = new Size(65, 21);
+            labelNumeRes.TabIndex = 0;
+            labelNumeRes.Text = "Nume ";
             // 
-            // label4
+            // labelTaxaLivrareRes
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(561, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(135, 21);
-            label4.TabIndex = 3;
-            label4.Text = "Cost livrare";
+            labelTaxaLivrareRes.AutoSize = true;
+            labelTaxaLivrareRes.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTaxaLivrareRes.Location = new Point(561, 9);
+            labelTaxaLivrareRes.Name = "labelTaxaLivrareRes";
+            labelTaxaLivrareRes.Size = new Size(135, 21);
+            labelTaxaLivrareRes.TabIndex = 3;
+            labelTaxaLivrareRes.Text = "Cost livrare";
             // 
-            // label2
+            // labelProgramRes
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(373, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(101, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Program";
+            labelProgramRes.AutoSize = true;
+            labelProgramRes.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelProgramRes.Location = new Point(373, 9);
+            labelProgramRes.Name = "labelProgramRes";
+            labelProgramRes.Size = new Size(101, 21);
+            labelProgramRes.TabIndex = 1;
+            labelProgramRes.Text = "Program";
             // 
-            // panel3
+            // panelForCheckClient
             // 
-            panel3.BackColor = Color.IndianRed;
-            panel3.Controls.Add(button3);
-            panel3.Controls.Add(textBox1);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(panel4);
-            panel3.Controls.Add(panel2);
-            panel3.Dock = DockStyle.Left;
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(222, 701);
-            panel3.TabIndex = 4;
+            panelForCheckClient.BackColor = Color.IndianRed;
+            panelForCheckClient.Controls.Add(searchByUniqueCodeButton);
+            panelForCheckClient.Controls.Add(uniqueCodeSearchBar);
+            panelForCheckClient.Controls.Add(uniqueOrderCodeLabel);
+            panelForCheckClient.Controls.Add(priceOfStandardDelivery);
+            panelForCheckClient.Controls.Add(minimuRequOrder);
+            panelForCheckClient.Controls.Add(total);
+            panelForCheckClient.Controls.Add(labelTotal);
+            panelForCheckClient.Controls.Add(finishOrderButton);
+            panelForCheckClient.Controls.Add(panelForClientOrder);
+            panelForCheckClient.Controls.Add(panelForLogo);
+            panelForCheckClient.Dock = DockStyle.Left;
+            panelForCheckClient.Location = new Point(0, 0);
+            panelForCheckClient.Name = "panelForCheckClient";
+            panelForCheckClient.Size = new Size(222, 701);
+            panelForCheckClient.TabIndex = 4;
             // 
-            // label8
+            // searchByUniqueCodeButton
             // 
-            label8.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(0, 525);
-            label8.Name = "label8";
-            label8.Size = new Size(215, 31);
-            label8.TabIndex = 7;
-            label8.Text = "+Standard Delivery";
-            label8.Visible = false;
+            searchByUniqueCodeButton.Location = new Point(79, 81);
+            searchByUniqueCodeButton.Name = "searchByUniqueCodeButton";
+            searchByUniqueCodeButton.Size = new Size(49, 29);
+            searchByUniqueCodeButton.TabIndex = 10;
+            searchByUniqueCodeButton.Text = "Go!";
+            searchByUniqueCodeButton.UseVisualStyleBackColor = true;
+            searchByUniqueCodeButton.Click += button3_Click;
             // 
-            // label7
+            // uniqueCodeSearchBar
             // 
-            label7.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(0, 556);
-            label7.Name = "label7";
-            label7.Size = new Size(219, 25);
-            label7.TabIndex = 6;
-            label7.Text = "MinimumOrder";
-            label7.Visible = false;
+            uniqueCodeSearchBar.Location = new Point(39, 48);
+            uniqueCodeSearchBar.Name = "uniqueCodeSearchBar";
+            uniqueCodeSearchBar.Size = new Size(135, 27);
+            uniqueCodeSearchBar.TabIndex = 9;
             // 
-            // label3
+            // uniqueOrderCodeLabel
             // 
-            label3.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(97, 489);
-            label3.Name = "label3";
-            label3.Size = new Size(122, 25);
-            label3.TabIndex = 5;
-            label3.Text = "0";
-            label3.Visible = false;
+            uniqueOrderCodeLabel.AutoSize = true;
+            uniqueOrderCodeLabel.Location = new Point(39, 25);
+            uniqueOrderCodeLabel.Name = "uniqueOrderCodeLabel";
+            uniqueOrderCodeLabel.Size = new Size(135, 20);
+            uniqueOrderCodeLabel.TabIndex = 8;
+            uniqueOrderCodeLabel.Text = "Unique Order code";
             // 
-            // label6
+            // priceOfStandardDelivery
             // 
-            label6.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(0, 489);
-            label6.Name = "label6";
-            label6.Size = new Size(82, 36);
-            label6.TabIndex = 4;
-            label6.Text = "Total";
-            label6.Visible = false;
-            
+            priceOfStandardDelivery.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            priceOfStandardDelivery.Location = new Point(0, 525);
+            priceOfStandardDelivery.Name = "priceOfStandardDelivery";
+            priceOfStandardDelivery.Size = new Size(215, 31);
+            priceOfStandardDelivery.TabIndex = 7;
+            priceOfStandardDelivery.Text = "+Standard Delivery";
+            priceOfStandardDelivery.Visible = false;
             // 
-            // button1
+            // minimuRequOrder
             // 
-            button1.Location = new Point(39, 603);
-            button1.Name = "button1";
-            button1.Size = new Size(109, 53);
-            button1.TabIndex = 3;
-            button1.Text = "Yep , that's about it";
-            button1.UseVisualStyleBackColor = true;
-            button1.Visible = false;
-            button1.Click += button1_Click;
+            minimuRequOrder.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            minimuRequOrder.Location = new Point(0, 556);
+            minimuRequOrder.Name = "minimuRequOrder";
+            minimuRequOrder.Size = new Size(219, 25);
+            minimuRequOrder.TabIndex = 6;
+            minimuRequOrder.Text = "MinimumOrder";
+            minimuRequOrder.Visible = false;
             // 
-            // panel4
+            // total
             // 
-            panel4.AutoScroll = true;
-            panel4.Controls.Add(label5);
-            panel4.Location = new Point(3, 295);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(216, 191);
-            panel4.TabIndex = 2;
-            
+            total.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            total.Location = new Point(97, 489);
+            total.Name = "total";
+            total.Size = new Size(122, 25);
+            total.TabIndex = 5;
+            total.Text = "0";
+            total.Visible = false;
             // 
-            // label5
+            // labelTotal
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Showcard Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(19, 13);
-            label5.Name = "label5";
-            label5.Size = new Size(53, 17);
-            label5.TabIndex = 2;
-            label5.Text = "label5";
-            
+            labelTotal.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTotal.Location = new Point(0, 489);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(82, 36);
+            labelTotal.TabIndex = 4;
+            labelTotal.Text = "Total";
+            labelTotal.Visible = false;
             // 
-            // panel2
+            // finishOrderButton
             // 
-            panel2.BackColor = Color.LightSalmon;
-            panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(22, 127);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(160, 141);
-            panel2.TabIndex = 1;
+            finishOrderButton.Location = new Point(39, 603);
+            finishOrderButton.Name = "finishOrderButton";
+            finishOrderButton.Size = new Size(109, 53);
+            finishOrderButton.TabIndex = 3;
+            finishOrderButton.Text = "Yep , that's about it";
+            finishOrderButton.UseVisualStyleBackColor = true;
+            finishOrderButton.Visible = false;
+            finishOrderButton.Click += button1_Click;
             // 
-            // pictureBox1
+            // panelForClientOrder
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(17, 17);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 103);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            panelForClientOrder.AutoScroll = true;
+            panelForClientOrder.Controls.Add(clientOrderLabel);
+            panelForClientOrder.Location = new Point(3, 295);
+            panelForClientOrder.Name = "panelForClientOrder";
+            panelForClientOrder.Size = new Size(216, 191);
+            panelForClientOrder.TabIndex = 2;
             // 
-            // label9
+            // clientOrderLabel
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(39, 25);
-            label9.Name = "label9";
-            label9.Size = new Size(135, 20);
-            label9.TabIndex = 8;
-            label9.Text = "Unique Order code";
+            clientOrderLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clientOrderLabel.AutoSize = true;
+            clientOrderLabel.Font = new Font("Showcard Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            clientOrderLabel.Location = new Point(19, 13);
+            clientOrderLabel.Name = "clientOrderLabel";
+            clientOrderLabel.Size = new Size(53, 17);
+            clientOrderLabel.TabIndex = 2;
+            clientOrderLabel.Text = "label5";
             // 
-            // textBox1
+            // panelForLogo
             // 
-            textBox1.Location = new Point(39, 48);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(135, 27);
-            textBox1.TabIndex = 9;
+            panelForLogo.BackColor = Color.LightSalmon;
+            panelForLogo.Controls.Add(appLogo);
+            panelForLogo.Location = new Point(22, 127);
+            panelForLogo.Name = "panelForLogo";
+            panelForLogo.Size = new Size(160, 141);
+            panelForLogo.TabIndex = 1;
             // 
-            // button3
+            // appLogo
             // 
-            button3.Location = new Point(79, 81);
-            button3.Name = "button3";
-            button3.Size = new Size(49, 29);
-            button3.TabIndex = 10;
-            button3.Text = "Go!";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            appLogo.Image = (Image)resources.GetObject("appLogo.Image");
+            appLogo.Location = new Point(17, 17);
+            appLogo.Name = "appLogo";
+            appLogo.Size = new Size(125, 103);
+            appLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            appLogo.TabIndex = 0;
+            appLogo.TabStop = false;
             // 
             // FormRestaurante
             // 
@@ -272,43 +364,43 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(968, 701);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
+            Controls.Add(panelForCheckClient);
+            Controls.Add(panelForRestaurantDetails);
             Controls.Add(flowLayoutPanel1);
             Name = "FormRestaurante";
             Text = "FormRestaurante";
             Load += FormRestaurante_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelForRestaurantDetails.ResumeLayout(false);
+            panelForRestaurantDetails.PerformLayout();
+            panelForCheckClient.ResumeLayout(false);
+            panelForCheckClient.PerformLayout();
+            panelForClientOrder.ResumeLayout(false);
+            panelForClientOrder.PerformLayout();
+            panelForLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)appLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        public Panel panel2;
-        public FlowLayoutPanel flowLayoutPanel1;
-        public Panel panel1;
-        public Label label1;
-        public Label label4;
-        public Label label2;
-        public Panel panel3;
-        public PictureBox pictureBox1;
-        public Label label5;
-        public Panel panel4;
-        public Label label6;
-        public Button button1;
-        public Label label3;
-        private Button button2;
-        public Label label7;
-        public Label label8;
-        public TextBox textBox1;
-        public Label label9;
-        public Button button3;
+        private Panel panelForLogo;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panelForRestaurantDetails;
+        private Label labelNumeRes;
+        private Label labelTaxaLivrareRes;
+        private Label labelProgramRes;
+        private Panel panelForCheckClient;
+        private PictureBox appLogo;
+        private Label clientOrderLabel;
+        private Panel panelForClientOrder;
+        private Label labelTotal;
+        private Button finishOrderButton;
+        private Label total;
+        private Button goBackButton;
+        private Label minimuRequOrder;
+        private Label priceOfStandardDelivery;
+        private TextBox uniqueCodeSearchBar;
+        private Label uniqueOrderCodeLabel;
+        private Button searchByUniqueCodeButton;
     }
 }

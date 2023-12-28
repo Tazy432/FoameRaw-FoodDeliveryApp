@@ -28,283 +28,289 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            label16 = new Label();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            panel3 = new Panel();
-            button2 = new Button();
-            label12 = new Label();
-            label5 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label9 = new Label();
-            label6 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            button1 = new Button();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            confirmDeliveryAdressPanel = new Panel();
+            distanceDelivery = new Label();
+            maxDistanceDelivery = new Label();
+            distanceDeliveryLabel = new Label();
+            maxDeliveryDistanceLabel = new Label();
+            confirmOrderPanel = new Panel();
+            confirmOrderButton = new Button();
+            totalPrice = new Label();
+            deliveryPriceLabel = new Label();
+            productsPrice = new Label();
+            totalPriceLabel = new Label();
+            extraDeliveryPrice = new Label();
+            extraDeliveryPriceLabel = new Label();
+            deliveryPrice = new Label();
+            productsPriceLabel = new Label();
+            confirmDeliverAdressButton = new Button();
+            nrTextBox = new TextBox();
+            streetTextBox = new TextBox();
+            cityTextBox = new TextBox();
             label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            nrLabel = new Label();
+            streetLabel = new Label();
+            cityLabel = new Label();
             panel2 = new Panel();
             mapControl1 = new DevExpress.XtraMap.MapControl();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
+            confirmDeliveryAdressPanel.SuspendLayout();
+            confirmOrderPanel.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)mapControl1).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // confirmDeliveryAdressPanel
             // 
-            panel1.BackColor = Color.LightSalmon;
-            panel1.Controls.Add(label16);
-            panel1.Controls.Add(label15);
-            panel1.Controls.Add(label14);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(273, 419);
-            panel1.TabIndex = 0;
+            confirmDeliveryAdressPanel.BackColor = Color.LightSalmon;
+            confirmDeliveryAdressPanel.Controls.Add(distanceDelivery);
+            confirmDeliveryAdressPanel.Controls.Add(maxDistanceDelivery);
+            confirmDeliveryAdressPanel.Controls.Add(distanceDeliveryLabel);
+            confirmDeliveryAdressPanel.Controls.Add(maxDeliveryDistanceLabel);
+            confirmDeliveryAdressPanel.Controls.Add(confirmOrderPanel);
+            confirmDeliveryAdressPanel.Controls.Add(confirmDeliverAdressButton);
+            confirmDeliveryAdressPanel.Controls.Add(nrTextBox);
+            confirmDeliveryAdressPanel.Controls.Add(streetTextBox);
+            confirmDeliveryAdressPanel.Controls.Add(cityTextBox);
+            confirmDeliveryAdressPanel.Controls.Add(label4);
+            confirmDeliveryAdressPanel.Controls.Add(nrLabel);
+            confirmDeliveryAdressPanel.Controls.Add(streetLabel);
+            confirmDeliveryAdressPanel.Controls.Add(cityLabel);
+            confirmDeliveryAdressPanel.Dock = DockStyle.Left;
+            confirmDeliveryAdressPanel.Location = new Point(0, 0);
+            confirmDeliveryAdressPanel.Margin = new Padding(3, 4, 3, 4);
+            confirmDeliveryAdressPanel.Name = "confirmDeliveryAdressPanel";
+            confirmDeliveryAdressPanel.Size = new Size(312, 559);
+            confirmDeliveryAdressPanel.TabIndex = 0;
             // 
-            // label16
+            // distanceDelivery
             // 
-            label16.Location = new Point(202, 234);
-            label16.Name = "label16";
-            label16.Size = new Size(63, 19);
-            label16.TabIndex = 20;
-            label16.Text = "0";
+            distanceDelivery.Location = new Point(231, 312);
+            distanceDelivery.Name = "distanceDelivery";
+            distanceDelivery.Size = new Size(72, 25);
+            distanceDelivery.TabIndex = 20;
+            distanceDelivery.Text = "0";
             // 
-            // label15
+            // maxDistanceDelivery
             // 
-            label15.Location = new Point(202, 215);
-            label15.Name = "label15";
-            label15.Size = new Size(63, 19);
-            label15.TabIndex = 19;
-            label15.Text = "0";
+            maxDistanceDelivery.Location = new Point(231, 287);
+            maxDistanceDelivery.Name = "maxDistanceDelivery";
+            maxDistanceDelivery.Size = new Size(72, 25);
+            maxDistanceDelivery.TabIndex = 19;
+            maxDistanceDelivery.Text = "0";
             // 
-            // label14
+            // distanceDeliveryLabel
             // 
-            label14.Location = new Point(23, 234);
-            label14.Name = "label14";
-            label14.Size = new Size(166, 19);
-            label14.TabIndex = 18;
-            label14.Text = "Distance Delivery Order";
+            distanceDeliveryLabel.Location = new Point(26, 312);
+            distanceDeliveryLabel.Name = "distanceDeliveryLabel";
+            distanceDeliveryLabel.Size = new Size(190, 25);
+            distanceDeliveryLabel.TabIndex = 18;
+            distanceDeliveryLabel.Text = "Distance Delivery Order";
             // 
-            // label13
+            // maxDeliveryDistanceLabel
             // 
-            label13.Location = new Point(23, 215);
-            label13.Name = "label13";
-            label13.Size = new Size(174, 19);
-            label13.TabIndex = 17;
-            label13.Text = "Maximum Delivery Distance";
+            maxDeliveryDistanceLabel.Location = new Point(26, 287);
+            maxDeliveryDistanceLabel.Name = "maxDeliveryDistanceLabel";
+            maxDeliveryDistanceLabel.Size = new Size(199, 25);
+            maxDeliveryDistanceLabel.TabIndex = 17;
+            maxDeliveryDistanceLabel.Text = "Maximum Delivery Distance";
             // 
-            // panel3
+            // confirmOrderPanel
             // 
-            panel3.BackColor = Color.DarkOrange;
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(label12);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label7);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 255);
-            panel3.Margin = new Padding(3, 2, 3, 2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(273, 164);
-            panel3.TabIndex = 16;
-            panel3.Visible = false;
+            confirmOrderPanel.BackColor = Color.DarkOrange;
+            confirmOrderPanel.Controls.Add(confirmOrderButton);
+            confirmOrderPanel.Controls.Add(totalPrice);
+            confirmOrderPanel.Controls.Add(deliveryPriceLabel);
+            confirmOrderPanel.Controls.Add(productsPrice);
+            confirmOrderPanel.Controls.Add(totalPriceLabel);
+            confirmOrderPanel.Controls.Add(extraDeliveryPrice);
+            confirmOrderPanel.Controls.Add(extraDeliveryPriceLabel);
+            confirmOrderPanel.Controls.Add(deliveryPrice);
+            confirmOrderPanel.Controls.Add(productsPriceLabel);
+            confirmOrderPanel.Dock = DockStyle.Bottom;
+            confirmOrderPanel.Location = new Point(0, 340);
+            confirmOrderPanel.Name = "confirmOrderPanel";
+            confirmOrderPanel.Size = new Size(312, 219);
+            confirmOrderPanel.TabIndex = 16;
+            confirmOrderPanel.Visible = false;
             // 
-            // button2
+            // confirmOrderButton
             // 
-            button2.Location = new Point(65, 103);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 41);
-            button2.TabIndex = 16;
-            button2.Text = "Looks good , let's go !";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            confirmOrderButton.Location = new Point(74, 137);
+            confirmOrderButton.Name = "confirmOrderButton";
+            confirmOrderButton.Size = new Size(121, 55);
+            confirmOrderButton.TabIndex = 16;
+            confirmOrderButton.Text = "Looks good , let's go !";
+            confirmOrderButton.UseVisualStyleBackColor = true;
+            confirmOrderButton.Click += button2_Click;
             // 
-            // label12
+            // totalPrice
             // 
-            label12.Font = new Font("Castellar", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(150, 80);
-            label12.Name = "label12";
-            label12.Size = new Size(63, 19);
-            label12.TabIndex = 15;
-            label12.Text = "0";
+            totalPrice.Font = new Font("Castellar", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            totalPrice.Location = new Point(171, 107);
+            totalPrice.Name = "totalPrice";
+            totalPrice.Size = new Size(72, 25);
+            totalPrice.TabIndex = 15;
+            totalPrice.Text = "0";
             // 
-            // label5
+            // deliveryPriceLabel
             // 
-            label5.Location = new Point(32, 23);
-            label5.Name = "label5";
-            label5.Size = new Size(112, 19);
-            label5.TabIndex = 8;
-            label5.Text = "DeliveryPrice\r\n";
+            deliveryPriceLabel.Location = new Point(37, 31);
+            deliveryPriceLabel.Name = "deliveryPriceLabel";
+            deliveryPriceLabel.Size = new Size(128, 25);
+            deliveryPriceLabel.TabIndex = 8;
+            deliveryPriceLabel.Text = "DeliveryPrice\r\n";
             // 
-            // label10
+            // productsPrice
             // 
-            label10.Location = new Point(150, 61);
-            label10.Name = "label10";
-            label10.Size = new Size(63, 19);
-            label10.TabIndex = 13;
-            label10.Text = "0";
+            productsPrice.Location = new Point(171, 81);
+            productsPrice.Name = "productsPrice";
+            productsPrice.Size = new Size(72, 25);
+            productsPrice.TabIndex = 13;
+            productsPrice.Text = "0";
             // 
-            // label11
+            // totalPriceLabel
             // 
-            label11.Font = new Font("Castellar", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(32, 80);
-            label11.Name = "label11";
-            label11.Size = new Size(112, 25);
-            label11.TabIndex = 14;
-            label11.Text = "Total";
+            totalPriceLabel.Font = new Font("Castellar", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            totalPriceLabel.Location = new Point(37, 107);
+            totalPriceLabel.Name = "totalPriceLabel";
+            totalPriceLabel.Size = new Size(128, 33);
+            totalPriceLabel.TabIndex = 14;
+            totalPriceLabel.Text = "Total";
             // 
-            // label9
+            // extraDeliveryPrice
             // 
-            label9.Location = new Point(150, 42);
-            label9.Name = "label9";
-            label9.Size = new Size(54, 19);
-            label9.TabIndex = 12;
-            label9.Text = "0";
+            extraDeliveryPrice.Location = new Point(171, 56);
+            extraDeliveryPrice.Name = "extraDeliveryPrice";
+            extraDeliveryPrice.Size = new Size(62, 25);
+            extraDeliveryPrice.TabIndex = 12;
+            extraDeliveryPrice.Text = "0";
             // 
-            // label6
+            // extraDeliveryPriceLabel
             // 
-            label6.Location = new Point(32, 42);
-            label6.Name = "label6";
-            label6.Size = new Size(112, 19);
-            label6.TabIndex = 9;
-            label6.Text = "ExtraDeliveryPrice";
+            extraDeliveryPriceLabel.Location = new Point(37, 56);
+            extraDeliveryPriceLabel.Name = "extraDeliveryPriceLabel";
+            extraDeliveryPriceLabel.Size = new Size(128, 25);
+            extraDeliveryPriceLabel.TabIndex = 9;
+            extraDeliveryPriceLabel.Text = "ExtraDeliveryPrice";
             // 
-            // label8
+            // deliveryPrice
             // 
-            label8.Location = new Point(150, 23);
-            label8.Name = "label8";
-            label8.Size = new Size(54, 19);
-            label8.TabIndex = 11;
-            label8.Text = "0";
+            deliveryPrice.Location = new Point(171, 31);
+            deliveryPrice.Name = "deliveryPrice";
+            deliveryPrice.Size = new Size(62, 25);
+            deliveryPrice.TabIndex = 11;
+            deliveryPrice.Text = "0";
             // 
-            // label7
+            // productsPriceLabel
             // 
-            label7.Location = new Point(32, 61);
-            label7.Name = "label7";
-            label7.Size = new Size(112, 19);
-            label7.TabIndex = 10;
-            label7.Text = "ProductsPrice";
+            productsPriceLabel.Location = new Point(37, 81);
+            productsPriceLabel.Name = "productsPriceLabel";
+            productsPriceLabel.Size = new Size(128, 25);
+            productsPriceLabel.TabIndex = 10;
+            productsPriceLabel.Text = "ProductsPrice";
             // 
-            // button1
+            // confirmDeliverAdressButton
             // 
-            button1.Location = new Point(91, 164);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 40);
-            button1.TabIndex = 7;
-            button1.Text = "Cmon im hungry!";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            confirmDeliverAdressButton.Location = new Point(104, 219);
+            confirmDeliverAdressButton.Margin = new Padding(3, 4, 3, 4);
+            confirmDeliverAdressButton.Name = "confirmDeliverAdressButton";
+            confirmDeliverAdressButton.Size = new Size(86, 53);
+            confirmDeliverAdressButton.TabIndex = 7;
+            confirmDeliverAdressButton.Text = "Cmon im hungry!";
+            confirmDeliverAdressButton.UseVisualStyleBackColor = true;
+            confirmDeliverAdressButton.Click += button1_Click;
             // 
-            // textBox3
+            // nrTextBox
             // 
-            textBox3.Location = new Point(122, 125);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 6;
+            nrTextBox.Location = new Point(139, 167);
+            nrTextBox.Margin = new Padding(3, 4, 3, 4);
+            nrTextBox.Name = "nrTextBox";
+            nrTextBox.Size = new Size(114, 27);
+            nrTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // streetTextBox
             // 
-            textBox2.Location = new Point(122, 85);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
+            streetTextBox.Location = new Point(139, 113);
+            streetTextBox.Margin = new Padding(3, 4, 3, 4);
+            streetTextBox.Name = "streetTextBox";
+            streetTextBox.Size = new Size(114, 27);
+            streetTextBox.TabIndex = 5;
             // 
-            // textBox1
+            // cityTextBox
             // 
-            textBox1.Location = new Point(122, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 4;
+            cityTextBox.Location = new Point(139, 57);
+            cityTextBox.Margin = new Padding(3, 4, 3, 4);
+            cityTextBox.Name = "cityTextBox";
+            cityTextBox.Size = new Size(114, 27);
+            cityTextBox.TabIndex = 4;
             // 
             // label4
             // 
-            label4.Location = new Point(14, 183);
+            label4.Location = new Point(16, 244);
             label4.Name = "label4";
-            label4.Size = new Size(69, 32);
+            label4.Size = new Size(79, 43);
             label4.TabIndex = 3;
             label4.Text = "\r\n";
             label4.Visible = false;
             // 
-            // label3
+            // nrLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(65, 125);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Number";
+            nrLabel.AutoSize = true;
+            nrLabel.Location = new Point(74, 167);
+            nrLabel.Name = "nrLabel";
+            nrLabel.Size = new Size(63, 20);
+            nrLabel.TabIndex = 2;
+            nrLabel.Text = "Number";
             // 
-            // label2
+            // streetLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(79, 88);
-            label2.Name = "label2";
-            label2.Size = new Size(37, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Street";
+            streetLabel.AutoSize = true;
+            streetLabel.Location = new Point(90, 117);
+            streetLabel.Name = "streetLabel";
+            streetLabel.Size = new Size(48, 20);
+            streetLabel.TabIndex = 1;
+            streetLabel.Text = "Street";
             // 
-            // label1
+            // cityLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(88, 46);
-            label1.Name = "label1";
-            label1.Size = new Size(28, 15);
-            label1.TabIndex = 0;
-            label1.Text = "City";
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new Point(101, 61);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new Size(34, 20);
+            cityLabel.TabIndex = 0;
+            cityLabel.Text = "City";
             // 
             // panel2
             // 
             panel2.Controls.Add(mapControl1);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(273, 0);
+            panel2.Location = new Point(312, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(734, 419);
+            panel2.Size = new Size(839, 559);
             panel2.TabIndex = 1;
             // 
             // mapControl1
             // 
             mapControl1.Dock = DockStyle.Fill;
             mapControl1.Location = new Point(0, 0);
+            mapControl1.Margin = new Padding(3, 4, 3, 4);
             mapControl1.Name = "mapControl1";
-            mapControl1.Size = new Size(734, 419);
+            mapControl1.Size = new Size(839, 559);
             mapControl1.TabIndex = 0;
             // 
             // UserControlMap
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(confirmDeliveryAdressPanel);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UserControlMap";
-            Size = new Size(1007, 419);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel3.ResumeLayout(false);
+            Size = new Size(1151, 559);
+            confirmDeliveryAdressPanel.ResumeLayout(false);
+            confirmDeliveryAdressPanel.PerformLayout();
+            confirmOrderPanel.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)mapControl1).EndInit();
             ResumeLayout(false);
@@ -312,30 +318,30 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel confirmDeliveryAdressPanel;
         private Panel panel2;
         private DevExpress.XtraMap.MapControl mapControl1;
-        private Button button1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button confirmDeliverAdressButton;
+        private TextBox nrTextBox;
+        private TextBox streetTextBox;
+        private TextBox cityTextBox;
         private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label6;
-        private Label label5;
-        private Panel panel3;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label14;
-        private Label label13;
-        private Label label16;
-        private Label label15;
-        private Button button2;
+        private Label nrLabel;
+        private Label streetLabel;
+        private Label cityLabel;
+        private Label extraDeliveryPriceLabel;
+        private Label deliveryPriceLabel;
+        private Panel confirmOrderPanel;
+        private Label totalPrice;
+        private Label totalPriceLabel;
+        private Label productsPrice;
+        private Label extraDeliveryPrice;
+        private Label deliveryPrice;
+        private Label productsPriceLabel;
+        private Label distanceDeliveryLabel;
+        private Label maxDeliveryDistanceLabel;
+        private Label distanceDelivery;
+        private Label maxDistanceDelivery;
+        private Button confirmOrderButton;
     }
 }

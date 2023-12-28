@@ -18,20 +18,69 @@ namespace Good_Friends_Never_Starve
 {
     public partial class FormRestaurante : Form
     {
-        public static string clientId = "";//the clients id
-        public static string idMaximActual = "";//the id of the current list if items
-        public static string restaurantId = "";//the restaurants id
-        public string mancaruri = "";//empty string needed later
+        private string clientId = "";//the clients id
+        private string idMaximActual = "";//the id of the current list if items
+        private string restaurantId = "";//the restaurants id
+        private string mancaruri = "";//empty string needed later
+        private string comandaMinima = "0";//minim comanda
+        private string costLivrare = "0";//cost standart de livrare
+        private string livrareStandard = "0";//distanta de livrare 
+        private string livrareExtra = "0";//cost livrare extra
+        private string livrareMaxima = "0";//distanta maxima de livrare
+        #region getters and setters for the private attributes on top of this
+        public string _comandaMinima
+        {
+            get { return comandaMinima; }
+            set { comandaMinima = value; }
+        }
+        public string _costLivrare
+        {
+            get { return costLivrare; }
+            set { costLivrare = value; }
+        }
+        public string _livrareStandard
+        {
+            get { return livrareStandard; }
+            set { livrareStandard = value; }
+        }
+        public string _livrareExtra
+        {
+            get { return livrareExtra; }
+            set { livrareExtra = value; }
+        }
+        public string _livrareMaxima
+        {
+            get { return livrareMaxima; }
+            set { livrareMaxima = value; }
+        }
+
+        public string _clientId
+        {
+            get { return clientId; }
+            set { clientId = value; }
+        }
+        public string _IdMaximActual
+        {
+            get { return idMaximActual; }
+            set { idMaximActual = value; }
+        }
+        public string _restaurantId
+        {
+            get { return restaurantId; }
+            set { restaurantId = value; }
+        }
+        public string _mancaruri
+        {
+            get { return mancaruri; }
+            set { mancaruri = value; }
+        }
+        #endregion
 
         private listaDeProduserestaurant myUserControl = new listaDeProduserestaurant();//products from the restaurant
         private UserControlMap harta = new UserControlMap();//user map , the map required for computing distances
         private CodeGenerator codeGenerator = new CodeGenerator();// the code generator required to generate unique code for each order
 
-        public static string comandaMinima = "0";//minim comanda
-        public static string costLivrare = "0";//cost standart de livrare
-        public static string livrareStandard = "0";//distanta de livrare 
-        public static string livrareExtra = "0";//cost livrare extra
-        public static string livrareMaxima = "0";//distanta maxima de livrare
+        
         /// <summary>
         /// 
         /// 
@@ -95,21 +144,21 @@ namespace Good_Friends_Never_Starve
         {
             try
             {
-                String comanda = "Select * from Restaurant ";               
+                String comanda = "Select * from Restaurant ";
                 SqlDataAdapter sda2 = new SqlDataAdapter(comanda, conn);
                 DataTable tabel2 = new DataTable();
                 sda2.Fill(tabel2);
                 foreach (DataRow i in tabel2.Rows)
                 {
-                    UserControl2 restaurantEntitate = new UserControl2();
+                    Restaurant restaurantEntitate = new Restaurant();
                     restaurantEntitate.Width = flowLayoutPanel1.Width * 2;
-                    restaurantEntitate.panel1.Width = flowLayoutPanel1.Width * 2;
-                    restaurantEntitate.label1.Text = i["numeRestaurant"].ToString();
-                    restaurantEntitate.label2.Text = i["programIncepere"].ToString().Substring(0, 5) + "-" + i["programInchidere"].ToString().Substring(0, 5);
-                    restaurantEntitate.label3.Text = i["pretLivare"].ToString();
-                    restaurantEntitate.pictureBox1.Image = Image.FromFile("C:\\Users\\Admin\\Desktop\\Food For Friends\\Good Friends Never Starve\\Resources\\ricardo.jpg");
-                    restaurantEntitate.idRestaurant = i["restaurantId"].ToString();
-                    restaurantEntitate.idClient = FormRestaurante.clientId;
+                    restaurantEntitate.decorativePanel.Width = flowLayoutPanel1.Width * 2;
+                    restaurantEntitate.nameOfRestaurant.Text = i["numeRestaurant"].ToString();
+                    restaurantEntitate.programOfRestaurant.Text = i["programIncepere"].ToString().Substring(0, 5) + "-" + i["programInchidere"].ToString().Substring(0, 5);
+                    restaurantEntitate.costOfDelivery.Text = i["pretLivare"].ToString();
+                    restaurantEntitate.restaurantImage.Image = Image.FromFile("C:\\Users\\Admin\\Desktop\\Food For Friends\\Good Friends Never Starve\\Resources\\ricardo.jpg");
+                    restaurantEntitate._idRestaurant = i["restaurantId"].ToString();
+                    restaurantEntitate._idClient = this._clientId;
 
 
                     restaurantEntitate.ComandaMinima = i["comandaMinima"].ToString(); // comanda minima a restaurantului
@@ -120,10 +169,7 @@ namespace Good_Friends_Never_Starve
                     restaurantEntitate.LivrareMaxima = i["distantaMaxima"].ToString();// distanta maxima acceptata
 
                     restaurantEntitate.LivrareExtra = i["pretLivrareExtra"].ToString();// pret distanta extra
-
-
-
-                    if (UserControl2.openClosed(restaurantEntitate.label2.Text) == false)
+                    if (Restaurant.openClosed(restaurantEntitate.programOfRestaurant.Text) == false)
                     {
                         restaurantEntitate.dezactivateEvents();
                     }
@@ -132,7 +178,7 @@ namespace Good_Friends_Never_Starve
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -152,15 +198,15 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            if (int.Parse(FormRestaurante.comandaMinima) > int.Parse(this.label3.Text))
+            if (int.Parse(this._comandaMinima) > int.Parse(this.total.Text))
             {
                 MessageBox.Show("Minimum order not fullfilled\n" + "Please add more products", "Order too small", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             else if (MessageBox.Show("do u want to proceed with the selected products?", "Continue", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                String listaProduseSiPreturi2 = label5.Text;
-                String clientId2 = FormRestaurante.clientId;
-                String restaurantId2 = FormRestaurante.restaurantId;
+                String listaProduseSiPreturi2 = clientOrderLabel.Text;
+                String clientId2 = this._clientId;
+                String restaurantId2 = this._restaurantId;
                 string idUri = "";
                 string[] altString = this.mancaruri.Split('/');
                 foreach (string i in altString)
@@ -233,7 +279,7 @@ namespace Good_Friends_Never_Starve
 
                     }
                     idMaximActual = (int.Parse(idMaximTrecut) + 1).ToString();
-                    FormRestaurante.idMaximActual = idMaximActual;
+                    this._IdMaximActual = idMaximActual;
                     foreach (KeyValuePair<string, int> pereche in stringCounts)
                     {
                         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-FTIQA47\MSSQLSERVER11;Initial Catalog=""Baza de date food app"";Integrated Security=True");
@@ -274,10 +320,10 @@ namespace Good_Friends_Never_Starve
                     conn.Close();
                 }
                 this.flowLayoutPanel1.Controls.Clear();
-                this.label1.Visible = false;
-                this.label4.Visible = false;
-                this.label2.Visible = false;
-                this.button1.Visible = false;
+                this.labelNumeRes.Visible = false;
+                this.labelTaxaLivrareRes.Visible = false;
+                this.labelProgramRes.Visible = false;
+                this.finishOrderButton.Visible = false;
                 UserControlMap harta = new UserControlMap();
                 harta.formTata = this;
                 harta.Width = flowLayoutPanel1.Width - 8;
@@ -289,11 +335,11 @@ namespace Good_Friends_Never_Starve
             }
             else
             {
-                this.label5.Text = "";
-                this.label3.Visible = false;
-                this.label6.Visible = false;
-                this.button1.Visible = false;
-                this.button2.Visible = false;
+                this.clientOrderLabel.Text = "";
+                this.total.Visible = false;
+                this.labelTotal.Visible = false;
+                this._button1.Visible = false;
+                this._goBackButton.Visible = false;
 
             }
 
@@ -308,15 +354,15 @@ namespace Good_Friends_Never_Starve
         {
             if (MessageBox.Show("Do you really wanna go back ?\n" + "The items from your list will be removed", "Go back to restaurants", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                
-                deleteLista(FormRestaurante.idMaximActual);
-                
+
+                deleteLista(this._IdMaximActual);
+
                 UserControlMap.x = 0;
-                FormRestaurante.comandaMinima = "0";
-                FormRestaurante.livrareStandard = "0";
-                FormRestaurante.costLivrare = "0";
-                FormRestaurante.livrareExtra = "0";
-                FormRestaurante.livrareMaxima = "0";
+                this._comandaMinima = "0";
+                this._livrareStandard = "0";
+                this._costLivrare = "0";
+                this._livrareExtra = "0";
+                this._livrareMaxima = "0";
                 this.Close();
             }
         }
@@ -331,12 +377,12 @@ namespace Good_Friends_Never_Starve
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            string codUnic = this.textBox1.Text;
+            string codUnic = this.uniqueCodeSearchBar.Text;
             string statusComanda = "";
             string numeClient = "";
             string pretFactura = "";
             String[] stringuri = codUnic.Split('/');
-            
+
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-FTIQA47\MSSQLSERVER11;Initial Catalog=""Baza de date food app"";Integrated Security=True");
             try
             {
@@ -349,18 +395,18 @@ namespace Good_Friends_Never_Starve
                 SqlDataAdapter sda = new SqlDataAdapter(comanda, conn);
                 DataTable tabel = new DataTable();
                 sda.Fill(tabel);
-                if(tabel.Rows.Count == 0) 
+                if (tabel.Rows.Count == 0)
                 {
                     MessageBox.Show("No order with this code");
-                    return;                        
+                    return;
                 }
-                foreach(DataRow i in tabel.Rows)
+                foreach (DataRow i in tabel.Rows)
                 {
-                    statusComanda = statusComanda + i["cantitate"].ToString()  + " X " + i["denumire"].ToString() + "\n";
+                    statusComanda = statusComanda + i["cantitate"].ToString() + " X " + i["denumire"].ToString() + "\n";
                     numeClient = i["nume"].ToString();
                     pretFactura = i["pret"].ToString();
                 }
-                MessageBox.Show("Hello ,"+numeClient + " your order of \n" + statusComanda + "is on the way.Total pricing: " + pretFactura,"Order status",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Hello ," + numeClient + " your order of \n" + statusComanda + "is on the way.Total pricing: " + pretFactura, "Order status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
